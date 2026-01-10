@@ -1,0 +1,10 @@
+d_model: ${d_model}
+n_heads: ${n_heads}
+d_head: ${d_head}
+
+d_latent_kv: 512    
+d_latent_q: 1536    
+d_rope: 64     
+
+bias: false
+dropout: 0.0

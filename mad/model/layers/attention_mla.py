@@ -100,7 +100,6 @@ class MultiHeadLatentAttention(nn.Module):
         q_rope = rearrange(q_rope, 'b l (h d) -> b l h d', h=self.n_heads)
         k_rope_t = rearrange(k_rope_t, 'b l (h d) -> b l h d', h=self.n_heads)
         
-        # Apply RoPE to current query and key-rope
         q_rope, k_rope_t = self._apply_rope(q_rope, k_rope_t, seq_idx=state[0].shape[1])
 
        
